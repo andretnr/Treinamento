@@ -20,8 +20,6 @@ public class Locadora {
 
 	}
 
-	
-
 	public void processar() {
 		escolha();
 	}
@@ -29,45 +27,45 @@ public class Locadora {
 	public void escolha() {
 		boolean repete = true;
 		while (repete) {
-			
-		try {
 
-			int opcao = Integer.parseInt(JOptionPane.showInputDialog(
-					"1 - Seleciona pelo Modelo \n 2 - Seleciona pela Velocidade \n 3 - Seleciona por Combustivel \n 4 - Seleciona pela Cor \n 5 - Listar todos carros \n9 - Encerrar"));
+			try {
 
-			switch (opcao) {
-			case 1:
-				buscarModelo();
-				break;
-			case 2:
-				buscarVelocidade();
-				break;
-			case 3:
-				buscarCombustivel();
-				break;
-			case 4:
-				buscarCor();
-				break;
-			case 5:
-				listarTudo();
-				break;
-			case 6:
-				comprarCarro();
-				break;
-			case 9:
-				repete = false;
-				break;
+				int opcao = Integer.parseInt(JOptionPane.showInputDialog(
+						"1 - Seleciona pelo Modelo \n 2 - Seleciona pela Velocidade \n 3 - Seleciona por Combustivel \n 4 - Seleciona pela Cor \n 5 - Listar todos carros \n 6 - Comprar Carro \n9 - Encerrar"));
 
-			default:
-				JOptionPane.showMessageDialog(null, "Opcao Inválida");
-				break;
+				switch (opcao) {
+				case 1:
+					buscarModelo();
+					break;
+				case 2:
+					buscarVelocidade();
+					break;
+				case 3:
+					buscarCombustivel();
+					break;
+				case 4:
+					buscarCor();
+					break;
+				case 5:
+					listarTudo();
+					break;
+				case 6:
+					comprarCarro();
+					break;
+				case 9:
+					repete = false;
+					break;
 
-			}
-		} catch (NumberFormatException e) {
-			JOptionPane.showMessageDialog(null, "Digitou errado amiguinho");
+				default:
+					JOptionPane.showMessageDialog(null, "Opcao Inválida");
+					break;
+
+				}
+			} catch (NumberFormatException e) {
+				JOptionPane.showMessageDialog(null, "Digitou errado amiguinho");
 //			processar();
 
-		}
+			}
 		}
 //		if (opcao == 1) {
 //			buscarModelo();
@@ -183,16 +181,14 @@ public class Locadora {
 	}
 
 	public void listarTudo() {
-		String mensagem="";
+		String mensagem = "";
 		for (int i = 0; i < vCarro.length; i++) {
-			mensagem = mensagem+ ("\nModelo do carro " + vCarro[i].modeloCarro)
-			+("Cor do Carro:     " + vCarro[i].cor)
-			+("Placa do Carro:   " + vCarro[i].placaCarro)
-			+("Velocidade Max:   " + vCarro[i].velocidadeMax)
-			+("Combustivel:      " + vCarro[i].combustivel)
-			+("Valor do Carro:   " + vCarro[i].valor);
-			
-		}		
+			mensagem = mensagem + ("\nModelo do carro " + vCarro[i].modeloCarro)
+					+ ("Cor do Carro:     " + vCarro[i].cor) + ("Placa do Carro:   " + vCarro[i].placaCarro)
+					+ ("Velocidade Max:   " + vCarro[i].velocidadeMax) + ("Combustivel:      " + vCarro[i].combustivel)
+					+ ("Valor do Carro:   " + vCarro[i].valor);
+
+		}
 		JOptionPane.showMessageDialog(null, mensagem);
 	}
 
@@ -213,24 +209,29 @@ public class Locadora {
 			}
 		}
 
-		
 	}
 
 	public void comprarCarro() {
-		JOptionPane.showInputDialog("Digite o modelo e a cor do carro que você deseja comprar?");
+		String model = JOptionPane.showInputDialog("Digite o modelo do carro que você deseja comprar?");
+		String cor = JOptionPane.showInputDialog("Digite a cor do carro?");
+		for (int i = 0; i < vCarro.length; i++) {
+			if (vCarro[i].modeloCarro == model && vCarro[i].cor == cor) {
+
+			}
+		}
 
 	}
-		
-		// for (int i = 0; i < vCarro.length; i++) {
+
+	// for (int i = 0; i < vCarro.length; i++) {
 //
-		// System.out.println("\nModelo do carro: " + vCarro[i].modeloCarro);
-		// System.out.println("Cor do Carro : " + vCarro[i].cor);
+	// System.out.println("\nModelo do carro: " + vCarro[i].modeloCarro);
+	// System.out.println("Cor do Carro : " + vCarro[i].cor);
 //			System.out.println("Placa do Carro : " + vCarro[i].placaCarro);
-		// System.out.println("Velocidade Max : " + vCarro[i].velocidadeMax);
-		// System.out.println("Combustivel : " + vCarro[i].combustivel);
+	// System.out.println("Velocidade Max : " + vCarro[i].velocidadeMax);
+	// System.out.println("Combustivel : " + vCarro[i].combustivel);
 //			System.out.println("Valor do Carro : " + vCarro[i].valor);
 //
-	
+
 	// }
 
 	public static void main(String[] args) {
