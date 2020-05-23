@@ -1,4 +1,4 @@
-package Exec3;
+package exec3;
 
 public class TestaCaneta {
 	

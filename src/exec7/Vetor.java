@@ -12,7 +12,7 @@ public class Vetor {
 		
 		for (int i=0; i<quantidade.length; i++); {
 				
-	  System.out.println("Valor do vetor: "+quantidade[i]);
+	 
 		}
 	}
 

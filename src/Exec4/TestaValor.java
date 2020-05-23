@@ -1,4 +1,4 @@
-package Exec4;
+package exec4;
 
 public class TestaValor {
 	public static void main(String[] args) {

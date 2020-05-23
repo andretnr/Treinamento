@@ -1,4 +1,4 @@
-package Exec6;
+package exec6;
 
 import java.util.Calendar;
 import javax.swing.JOptionPane;

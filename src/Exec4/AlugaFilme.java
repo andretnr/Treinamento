@@ -1,4 +1,4 @@
-package Exec4;
+package exec4;
 
 import javax.swing.JOptionPane;
 import javax.xml.bind.ParseConversionEvent;
@@ -25,7 +25,7 @@ public class AlugaFilme {
 	private void processar() {
 		if (verifiqueDisponibilidade(escolhaFilme())) {
 			JOptionPane.showInternalMessageDialog(null, "Esse filme está disponível!");
-			verificarValor();
+		//	verificarValor();
 		} else {
 			JOptionPane.showInternalMessageDialog(null, "esse filme não está disponível");
 		}
@@ -56,15 +56,20 @@ public class AlugaFilme {
 		return false;
 	}
 
-	public double verificarValor(int diastotal, double valorfilme, double valorcliente ) {
-		diastotal= Integer.parseInt(JOptionPane.showInputDialog(null,"Alugou o filme por quantos dias?" ));
-			valorcliente= Double.parseDouble(JOptionPane.showInputDialog(null,"Efetue o pagamento: "));v
-			verificarValor==valordiario*diastotal;
-			
-	}
+//	public double verificarValor(int diastotal, double valorfilme, double valorcliente ) {
+//		diastotal= Integer.parseInt(JOptionPane.showInputDialog(null,"Alugou o filme por quantos dias?" ));
+//			valorcliente= Double.parseDouble(JOptionPane.showInputDialog(null,"Efetue o pagamento: "));v
+//			verificarValor==valordiario*diastotal;
+//			
+//	}
 	
-	public double valordiario () {
-		valordiario filme
+//	public double valordiario () {
+//		valordiario filme
+
+	public static void main(String[] args) {
+		new AlugaFilme();
 	}
 
 }
+
+//}

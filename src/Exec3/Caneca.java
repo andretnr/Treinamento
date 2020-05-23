@@ -1,4 +1,4 @@
-package Exec3;
+package exec3;
 
 //Armazenar informações de Canecas
 public class Caneca extends Produto{

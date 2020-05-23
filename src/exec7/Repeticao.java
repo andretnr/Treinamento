@@ -15,8 +15,10 @@ public class Repeticao {
 	
 			
 			
-//		}
-		testaWhile();
+		}
+		
+			
+		
 	}
 	public void testaWhile() {
 		int i = 10;

@@ -1,4 +1,4 @@
-package Exec2;
+package exec2;
 
 import java.util.Scanner;
 
